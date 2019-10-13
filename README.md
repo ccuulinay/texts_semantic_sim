@@ -1,4 +1,5 @@
-#texts_semantic_sim   
+#texts_semantic_sim
+---
 题目：对于给到的2句描述，设计一套算法识别他们是否语义上是一致的。
 ---
 数据描述：
