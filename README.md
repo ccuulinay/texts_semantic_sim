@@ -116,9 +116,9 @@ ROC AUC SCORE: 0.5336348419215253
 |Actual 1| 5157   | 418 |
 
 ###### manhattan_lstm_distance (upsampled):  
-F1 score: 0.4581174031847734
-Accuracy: 0.8129391100702577
-ROC AUC SCORE: 0.6662370055554496
+F1 score: 0.4581174031847734  
+Accuracy: 0.8129391100702577  
+ROC AUC SCORE: 0.6662370055554496  
 混淆矩阵：  
             
 | cm |  Pred 0| Pred 1|
@@ -127,9 +127,9 @@ ROC AUC SCORE: 0.6662370055554496
 |Actual 1| 3144   | 2431 |
 
 ###### nn with concate L1 distance, cosine distance, exp neg manhattan distance, and multiply and then MLP. (upsampled & 2 epoch):  
-F1 score: 0.3597253080185821
-Accuracy: 0.5875618006765547
-ROC AUC: SCORE 0.6075543781436592
+F1 score: 0.3597253080185821  
+Accuracy: 0.5875618006765547  
+ROC AUC: SCORE 0.6075543781436592  
 混淆矩阵：  
             
 | cm |  Pred 0| Pred 1|
