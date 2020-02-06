@@ -94,6 +94,53 @@ ROC_AUC_SCORE: 0.6219581174762067
 |Actual 1| 2248   | 1094 |
 
 ---
+
+## Day2&3
+### 神经网络分类模型建模
+1. 采用tencent ai lab的预训练词向量。
+2. 数据预处理。
+3. 建立神经网络。
+    - 基于双向lstm编码的孪生网络，采用对数负曼哈顿距离作为衡量两个输入的相似度衡量；
+    - 基于双向gru编码的，并计算两个输入的对数负曼哈顿距离，cosine距离，L1距离，乘积，合并后作为MLP的输入；  
+
+
+###### manhattan_lstm_distance:  
+F1 score: 0.1351220300630354  
+Accuracy: 0.8259497788186313  
+ROC AUC SCORE: 0.5336348419215253  
+混淆矩阵：  
+            
+| cm |  Pred 0| Pred 1|
+|----|  ----  | ----  |
+|Actual 0| 24975  | 194 |
+|Actual 1| 5157   | 418 |
+
+###### manhattan_lstm_distance (upsampled):  
+F1 score: 0.4581174031847734  
+Accuracy: 0.8129391100702577  
+ROC AUC SCORE: 0.6662370055554496  
+混淆矩阵：  
+            
+| cm |  Pred 0| Pred 1|
+|----|  ----  | ----  |
+|Actual 0| 22562  | 2607 |
+|Actual 1| 3144   | 2431 |
+
+###### nn with concate L1 distance, cosine distance, exp neg manhattan distance, and multiply and then MLP. (upsampled & 2 epoch):  
+F1 score: 0.3597253080185821  
+Accuracy: 0.5875618006765547  
+ROC AUC: SCORE 0.6075543781436592  
+混淆矩阵：  
+            
+| cm |  Pred 0| Pred 1|
+|----|  ----  | ----  |
+|Actual 0| 22562  | 2607 |
+|Actual 1| 3144   | 2431 |
+
+
+
+---
+
 ## TODO
 ### 神经网络练习
 - 测试语义相似度的深度学习模型的预训练的词向量（fasttext/腾讯AI LAB等）,作为编码输入文本的编码输入。
